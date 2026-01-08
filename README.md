@@ -83,10 +83,37 @@ All components are in `app/components/` and can be customized as needed.
 
 ## Deployment
 
-### Vercel
+### Option 1: Deploy with Vercel CLI
+
+```bash
+# Install Vercel CLI globally (if not already installed)
+npm install -g vercel
+
+# Deploy to Vercel
+vercel
+
+# For production deployment
+vercel --prod
+```
+
+### Option 2: Deploy via GitHub Actions
+
+GitHub Actions workflows are included in `.github/workflows/`:
+- `deploy-vercel-official.yml` - Official Vercel deployment workflow
+
+**Setup required:**
+1. Add these secrets to your GitHub repository:
+   - `VERCEL_TOKEN` - Get from [Vercel Settings → Tokens](https://vercel.com/account/tokens)
+   - `VERCEL_ORG_ID` - Found in Vercel project settings
+   - `VERCEL_PROJECT_ID` - Found in Vercel project settings
+   - `BLOGS_FOR_VERCEL_API_KEY` - Your Blogs-For-Vercel API key
+
+2. Push to GitHub - deployment will happen automatically!
+
+### Option 3: Deploy via Vercel Dashboard
 
 1. Push your code to GitHub
-2. Import your repository in Vercel
+2. Import your repository in [Vercel Dashboard](https://vercel.com/new)
 3. Add `BLOGS_FOR_VERCEL_API_KEY` in Environment Variables
 4. Deploy!
 
