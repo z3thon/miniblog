@@ -1,0 +1,158 @@
+@import './styles/glassmorphic.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Professional white background */
+body {
+  background: #ffffff;
+  min-height: 100vh;
+}
+
+/* Enhanced markdown/prose styling */
+.prose {
+  color: var(--glass-black-dark);
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  color: var(--glass-black-dark);
+  font-weight: 700;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+.prose h1 {
+  font-size: 2.25em;
+  border-bottom: 2px solid rgba(38, 169, 224, 0.2);
+  padding-bottom: 0.5em;
+}
+
+.prose h2 {
+  font-size: 1.875em;
+}
+
+.prose h3 {
+  font-size: 1.5em;
+}
+
+.prose p {
+  margin-bottom: 1.25em;
+  line-height: 1.75;
+}
+
+.prose a {
+  color: var(--glass-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s;
+}
+
+.prose a:hover {
+  color: var(--glass-primary-dark);
+}
+
+.prose strong {
+  color: var(--glass-black-dark);
+  font-weight: 700;
+}
+
+.prose em {
+  font-style: italic;
+}
+
+.prose code {
+  background: rgba(38, 169, 224, 0.1);
+  color: var(--glass-primary-dark);
+  padding: 0.2em 0.4em;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+}
+
+.prose pre {
+  background: #1e293b;
+  color: #e2e8f0;
+  padding: 1.5em;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 1.5em 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.prose pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+  border-radius: 0;
+  font-size: 0.875em;
+}
+
+.prose blockquote {
+  border-left: 4px solid var(--glass-primary);
+  padding-left: 1.5em;
+  margin: 1.5em 0;
+  font-style: italic;
+  color: var(--glass-gray-dark);
+}
+
+.prose ul,
+.prose ol {
+  margin: 1.5em 0;
+  padding-left: 2em;
+}
+
+.prose li {
+  margin: 0.5em 0;
+  line-height: 1.75;
+}
+
+.prose ul {
+  list-style-type: disc;
+}
+
+.prose ol {
+  list-style-type: decimal;
+}
+
+.prose li::marker {
+  color: var(--glass-primary);
+}
+
+.prose img {
+  border-radius: 0.5rem;
+  margin: 1.5em 0;
+  max-width: 100%;
+  height: auto;
+}
+
+.prose hr {
+  border: none;
+  border-top: 2px solid rgba(38, 169, 224, 0.2);
+  margin: 2em 0;
+}
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+}
+
+.prose th,
+.prose td {
+  border: 1px solid rgba(38, 169, 224, 0.2);
+  padding: 0.75em;
+  text-align: left;
+}
+
+.prose th {
+  background: rgba(38, 169, 224, 0.1);
+  font-weight: 700;
+  color: var(--glass-black-dark);
+}
+

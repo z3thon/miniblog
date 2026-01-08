@@ -1,0 +1,25 @@
+{
+  "name": "glassmorphic-starter-pack",
+  "version": "1.0.0",
+  "description": "A complete starter pack for glassmorphic design in Next.js",
+  "main": "index.js",
+  "scripts": {
+    "dev": "echo 'This is a starter pack. Copy files to your Next.js project.'"
+  },
+  "keywords": [
+    "glassmorphic",
+    "design-system",
+    "nextjs",
+    "framer-motion",
+    "ui-components"
+  ],
+  "author": "",
+  "license": "MIT",
+  "peerDependencies": {
+    "next": "^14.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "framer-motion": "^10.0.0"
+  }
+}
+
