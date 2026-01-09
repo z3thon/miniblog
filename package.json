@@ -11,6 +11,7 @@
   "dependencies": {
     "@lztek/blogs-for-vercel-sdk": "^0.2.0",
     "@tailwindcss/typography": "^0.5.19",
+    "@vercel/analytics": "^1.6.1",
     "dotenv": "^17.2.3",
     "framer-motion": "^11.0.0",
     "next": "^16.1.1",

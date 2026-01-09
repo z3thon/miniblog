@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Dancing_Script, Merriweather } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/react';
 import './globals.css';
 
 const dancingScript = Dancing_Script({
@@ -26,7 +27,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`light ${dancingScript.variable} ${merriweather.variable}`} style={{ colorScheme: 'light' }}>
-      <body className="light">{children}</body>
+      <body className="light">
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
