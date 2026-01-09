@@ -24,47 +24,55 @@ const client = new BlogsForVercelClient({
 });
 
 // Map of slugs to featured image URLs
-// Using Unsplash images related to mental health, depression, and wellness
+// Using carefully selected Unsplash images that are more relevant to each post's content
 const featuredImages = {
-  'why-do-i-feel-like-a-different-person-when-i-m-depressed': {
-    url: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200&h=630&fit=crop',
-    alt: 'Person looking at their reflection',
-  },
-  'the-college-student-s-guide-to-managing-depression-when-school-makes-it-worse': {
-    url: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1200&h=630&fit=crop',
-    alt: 'College student studying',
-  },
-  'what-is-bed-rotting-and-why-you-can-t-stop-doing-it': {
-    url: 'https://images.unsplash.com/photo-1522771739844-6a9f47d43b8d?w=1200&h=630&fit=crop',
-    alt: 'Person in bed',
-  },
-  'how-to-stop-ghosting-your-friends-when-depression-hits': {
-    url: 'https://images.unsplash.com/photo-1529156069898-49953e41bcc6?w=1200&h=630&fit=crop',
-    alt: 'Friends supporting each other',
-  },
-  'the-who-is-in-charge-of-your-day-challenge-a-30-day-depression-recovery-practice': {
-    url: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200&h=630&fit=crop',
-    alt: 'Sunrise representing new day and hope',
-  },
-  'depression-trap-cards-what-they-are-and-how-to-build-yours': {
-    url: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=630&fit=crop',
-    alt: 'Strategy and planning',
-  },
-  'how-long-does-a-depressive-episode-last-and-how-to-make-it-shorter': {
-    url: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200&h=630&fit=crop',
-    alt: 'Recovery and healing journey',
+  'lightbulbs-vs-sunrises-why-depression-recovery-takes-time-and-that-s-okay': {
+    url: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=630&fit=crop',
+    alt: 'Beautiful sunrise over mountains representing gradual recovery and hope',
   },
   'the-false-belief-behind-your-depression-and-how-to-find-it': {
     url: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&h=630&fit=crop',
-    alt: 'Self-reflection and understanding',
+    alt: 'Person in thoughtful reflection, representing self-discovery and introspection',
   },
-  'lightbulbs-vs-sunrises-why-depression-recovery-takes-time-and-that-s-okay': {
-    url: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=630&fit=crop',
-    alt: 'Sunrise representing gradual recovery',
-  },
-  'why-gratitude-isn-t-toxic-positivity-and-how-it-actually-helps-depression': {
+  'how-long-does-a-depressive-episode-last-and-how-to-make-it-shorter': {
     url: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200&h=630&fit=crop',
-    alt: 'Gratitude and positive mindset',
+    alt: 'Path through nature representing the journey of recovery and healing',
+  },
+  'depression-trap-cards-what-they-are-and-how-to-build-yours': {
+    url: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=630&fit=crop',
+    alt: 'Strategic planning and organization tools representing trap card strategies',
+  },
+  'the-who-is-in-charge-of-your-day-challenge-a-30-day-depression-recovery-practice': {
+    url: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=630&fit=crop',
+    alt: 'Early morning sunrise representing new beginnings and taking charge of your day',
+  },
+  'how-to-stop-ghosting-your-friends-when-depression-hits': {
+    url: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&h=630&fit=crop',
+    alt: 'Friends connecting and supporting each other through difficult times',
+  },
+  'what-is-bed-rotting-and-why-you-can-t-stop-doing-it': {
+    url: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1200&h=630&fit=crop',
+    alt: 'Person in bed during daytime, representing the struggle with bed-rotting',
+  },
+  'the-college-student-s-guide-to-managing-depression-when-school-makes-it-worse': {
+    url: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=630&fit=crop',
+    alt: 'College student studying and managing academic stress',
+  },
+  'why-do-i-feel-like-a-different-person-when-i-m-depressed': {
+    url: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=1200&h=630&fit=crop',
+    alt: 'Person looking at their reflection in water, representing identity confusion and self-awareness',
+  },
+  'test-with-userid': {
+    url: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&h=630&fit=crop',
+    alt: 'Generic test image',
+  },
+  'testing-the-syntax-for-everything': {
+    url: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&h=630&fit=crop',
+    alt: 'Generic test image',
+  },
+  'test-1': {
+    url: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&h=630&fit=crop',
+    alt: 'Generic test image',
   },
 };
 

@@ -36,9 +36,7 @@ yarn-error.log*
 next-env.d.ts
 
 # debug logs
-.cursor/debug.log
-
-# IDE
+.cursor/debug.log# IDE
 .vscode/
 .idea/
 *.swp

@@ -4,10 +4,29 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Force light mode - disable dark mode completely */
+html {
+  color-scheme: light !important;
+}
+
+html.dark,
+html[data-theme='dark'],
+html[class*='dark'] {
+  color-scheme: light !important;
+}
+
 /* Professional white background */
 body {
-  background: #ffffff;
+  background: #ffffff !important;
   min-height: 100vh;
+  color-scheme: light !important;
+}
+
+body.dark,
+body[data-theme='dark'],
+body[class*='dark'] {
+  background: #ffffff !important;
+  color-scheme: light !important;
 }
 
 /* Enhanced markdown/prose styling */

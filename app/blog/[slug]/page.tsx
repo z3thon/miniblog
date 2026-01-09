@@ -2,7 +2,6 @@ import { getBlogPost } from '@lztek/blogs-for-vercel-sdk/server';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
-import GlassCard from '../../components/GlassCard';
 import GlassButton from '../../components/GlassButton';
 
 export async function generateMetadata({
@@ -57,10 +56,10 @@ export default async function BlogPostPage({
             </GlassButton>
           </Link>
 
-            <GlassCard className="mb-8 overflow-hidden">
+            <div className="glass-card rounded-3xl mb-8 overflow-hidden p-0">
               {/* Featured Image Hero */}
               {post.featured_image && (
-                <div className="relative w-full h-64 sm:h-80 md:h-96 mb-8 -mx-8 -mt-8">
+                <div className="relative w-full h-64 sm:h-80 md:h-96 mb-0 rounded-t-3xl overflow-hidden" style={{ width: '100%' }}>
                   <Image
                     src={post.featured_image}
                     alt={post.featured_image_alt || post.title}
@@ -68,11 +67,13 @@ export default async function BlogPostPage({
                     className="object-cover"
                     priority
                     sizes="100vw"
+                    style={{ position: 'absolute', inset: 0 }}
                   />
                 </div>
               )}
               
               {/* Hero Section */}
+              <div className="p-8">
               <header className="mb-8 pb-8 border-b border-gray-200">
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-gray-900 leading-tight">
                   {post.title}
@@ -132,7 +133,8 @@ export default async function BlogPostPage({
                 className="prose prose-lg prose-headings:text-gray-900 prose-headings:font-bold prose-p:text-gray-700 prose-p:leading-relaxed prose-a:text-[var(--glass-primary)] prose-a:no-underline hover:prose-a:underline prose-strong:text-gray-900 prose-code:text-[var(--glass-primary-dark)] prose-code:bg-gray-100 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-blockquote:text-gray-600 prose-blockquote:border-[var(--glass-primary)] prose-blockquote:pl-6 prose-blockquote:italic prose-img:rounded-lg prose-img:shadow-md max-w-none"
                 dangerouslySetInnerHTML={{ __html: post.content_html || '' }}
               />
-            </GlassCard>
+              </div>
+            </div>
           </div>
         </main>
     );
