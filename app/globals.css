@@ -4,6 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Blogs for Vercel fonts */
+/* Font variables are set by Next.js font optimization in layout.tsx */
+:root {
+  --font-geist-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
 /* Force light mode - disable dark mode completely */
 html {
   color-scheme: light !important;
